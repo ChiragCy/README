@@ -609,21 +609,17 @@ User navigates to the Crops Tab.
 
 ### Step 5
 
-User creates or updates Visit Report Crop records related to the customer visit.
+User reviews Crop information associated with the Visit Report.
 
 ### Step 6
 
-User reviews Crop information associated with the Visit Report.
+User opens Meeting Notes.
 
 ### Step 7
 
-User opens Meeting Notes.
-
-### Step 8
-
 User launches AI preparation.
 
-### Step 9
+### Step 8
 
 AI provides:
 
@@ -631,27 +627,27 @@ AI provides:
 - Recommendations
 - Summary Assistance
 
-### Step 10
+### Step 9
 
 User records voice notes.
 
-### Step 11
+### Step 10
 
 EinsteinTranscribeWCmp converts speech to text.
 
-### Step 12
+### Step 11
 
 Flow processes data and updates Visit Report.
 
-### Step 13
+### Step 12
 
 User reviews Post-Call Analysis.
 
-### Step 14
+### Step 13
 
 User saves Visit Report.
 
-### Step 15
+### Step 14
 
 System creates follow-up Tasks and Events when applicable.
 
@@ -661,27 +657,22 @@ System creates follow-up Tasks and Events when applicable.
 
 ### Create Visit Report
 
-> Insert Screenshot
+<img width="1136" height="727" alt="image" src="https://github.com/user-attachments/assets/ffba9b0d-be92-4865-b5aa-91aafc48a413" />
 
 ### Golden Layout
 
-> Insert Screenshot
+<img width="1858" height="792" alt="image" src="https://github.com/user-attachments/assets/c44a1bdd-f5ba-4722-b26b-ce3f942ab050" />
 
-### Crops Tab
-
-> Insert Screenshot
-
-### Create Visit Report Crop
-
-> Insert Screenshot
+### Tabs
+<img width="499" height="76" alt="image" src="https://github.com/user-attachments/assets/afff7168-a877-4f27-995c-17b33b0e94ca" />
 
 ### Meeting Notes & AI Experience
-
-> Insert Screenshot
+<img width="1233" height="625" alt="image" src="https://github.com/user-attachments/assets/39f98ac2-5a39-4404-af35-1544074c8a39" />
 
 ### Dynamic Actions
 
-> Insert Screenshot
+<img width="1281" height="106" alt="image" src="https://github.com/user-attachments/assets/d0cd0051-a73b-44b1-8f39-c08ebd39624c" />
+
 
 ### Mobile Experience
 
@@ -731,6 +722,96 @@ User navigates to the Crops Tab.
 All Crop records remain associated with the current Visit Report and inherit the same security model and access permissions defined for Golden Visit Report users.
 
 ---
+
+
+# Business Context
+
+As part of the global Farm2Cloud transformation initiative, BASF is standardizing the Visit Management process through the implementation of a single Golden Visit Report template.
+
+Historically, multiple Visit Report templates existed across regions, resulting in inconsistent user experiences, fragmented reporting capabilities, varying business processes, and differences in data quality.
+
+The Golden Visit Report Template addresses these challenges by introducing:
+
+- A globally standardized Visit Report record type
+- Consistent Lightning Experience layouts
+- Standardized metadata structure
+- Unified security and access model
+- AI-powered visit preparation capabilities
+- Voice-to-text visit documentation
+- Mobile-ready user experience
+
+The objective is to ensure that all Sales users operate using a common process while maintaining regional scalability and supporting future global enhancements.
+
+---
+
+# Solution Overview
+
+The Golden Visit Report solution consists of four primary functional areas:
+
+1. Visit Planning
+2. Visit Execution
+3. Visit Documentation
+4. Follow-Up Management
+
+Users can prepare customer visits, capture visit outcomes, generate AI-powered summaries, manage crop-related information, and create follow-up activities within a single consolidated user experience.
+
+The solution leverages Salesforce Lightning Experience, Flow Automation, AI Components, Dynamic Forms, Dynamic Actions, and Standard Salesforce Security features.
+
+---
+
+# Key Features
+
+## Golden Visit Report Experience
+
+Provides a consistent Visit Report structure across all supported business units.
+
+Capabilities include:
+
+- Standardized page layouts
+- Standardized Lightning Pages
+- Unified record type structure
+- Consistent field organization
+- Global reporting support
+
+---
+
+## AI Visit Preparation
+
+Users can leverage AI functionality to prepare customer visits.
+
+Capabilities include:
+
+- AI-generated visit preparation recommendations
+- Suggested talking points
+- AI-generated visit summaries
+- Intelligent field population
+
+Benefits include:
+
+- Reduced manual effort
+- Increased productivity
+- Improved visit quality
+- More consistent customer engagement
+
+---
+
+## Voice-to-Text Documentation
+
+Sales users can dictate visit notes directly within the Visit Report.
+
+Capabilities include:
+
+- Audio recording
+- Speech recognition
+- Automatic transcription
+- Direct population of Visit Report fields
+
+Benefits include:
+
+- Faster documentation
+- Better field adoption
+- Reduced administrative effort
+ ---
 
 ## Technical Execution Flow
 
