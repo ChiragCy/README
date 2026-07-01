@@ -304,7 +304,7 @@ Allows Sales users to capture crop-related information discussed during customer
 |--------------|
 | Visit Report Crops |
 
-#### Action Buttons
+#### Dynamic Action Buttons
 
 | Action |
 |---------|
@@ -349,19 +349,6 @@ Contains:
 - Tasks
 - Events
 - Activity Timeline
-
----
-
-## Dynamic Actions
-
-- Edit Attendees
-- File
-- Delete
-- Post
-- Distribute Internally
-- View PDF
-- Clone with Related
-- New Sales Event
 
 ---
 
