@@ -1,11 +1,17 @@
 # Golden Visit Report Template
 
-> **User Story:** 1043380  
-> **Title:** Documentation – Creation of Golden Visit Report Template  
-> **Program:** Salesforce@AP  
-> **Solution Area:** Visit Management  
-> **Document Status:** Approved  
-> **Documentation Type:** Functional & Technical Solution Documentation  
+> **User Story:** 1043380
+>
+> **Title:** Documentation – Creation of Golden Visit Report Template
+>
+> **Program:** Salesforce@AP
+>
+> **Solution Area:** Visit Management
+>
+> **Document Status:** Approved
+>
+> **Documentation Type:** Functional & Technical Solution Documentation
+>
 > **Reference Stories:** 1032101, 1034337
 
 ---
@@ -31,13 +37,14 @@
 - UI / UX
 - Business Logic
 - Traceability Matrix
+- Deployment Overview
 - Approval Summary
 
 ---
 
 # 1. Executive Summary
 
-The Golden Visit Report Template provides a unified global visit management experience with AI-enabled visit preparation, voice transcription, summary generation, standardized metadata, security model, Lightning experience and mobile support. 
+The Golden Visit Report Template establishes a standardized global Visit Report process across Salesforce@AP.
 
 The solution consolidates:
 
@@ -46,10 +53,13 @@ The solution consolidates:
 - AI Visit Preparation Capabilities
 - Voice-to-Text Transcription
 - AI Summary Generation
+- Unified Security Model
+- Standardized Lightning User Experience
+- Mobile Optimization
 
-The objective is to provide a unified user experience, consistent metadata model, standardized Lightning layout, and AI-enabled Visit Report creation process.
+The objective is to provide a unified metadata structure, security model, Lightning architecture, and AI-enabled visit documentation process.
 
-The solution supports the following personas:
+Supported personas:
 
 - Sales Representative
 - Sales Manager
@@ -71,30 +81,39 @@ The solution supports the following personas:
 |         SC_VisitReport_GLB_FlexiPage               |
 +----------------------------------------------------+
                         |
-        +---------------+----------------+
-        |               |                |
-        v               v                v
-     Details         Related       Meeting Notes
-       Tab             Tab              Tab
+      +-----------------+------------------+
+      |                 |                  |
+      v                 v                  v
+   Details          Related            Crops
+     Tab              Tab               Tab
                                            |
                                            v
-                           Visit Report Creation Flow
+                           Visit Report Crop Records
                                            |
                                            v
-                              AI Service Components
-                                           |
-               +---------------------------+--------------------------+
-               |                           |                          |
-               v                           v                          v
-    EinsteinTranscribeWCmp   Fetch Metadata Flow    Process Summary Flow
-               |                           |                          |
-               +---------------------------+--------------------------+
-                                           |
-                                           v
-                                  Save Visit Report
-                                           |
-                                           v
-                              Create Tasks and Events
+                               Create / Edit Crop Data
+
+                        |
+                        v
+                 Meeting Notes Tab
+                        |
+                        v
+              Visit Report Creation Flow
+                        |
+                        v
+                  AI Components
+                        |
+    +-------------------+-------------------+
+    |                   |                   |
+    v                   v                   v
+Einstein          Fetch Metadata      Process Visit
+Transcribe             Flow             Summary
+                        |
+                        v
+                 Save Visit Report
+                        |
+                        v
+              Create Tasks & Events
 ```
 
 ---
@@ -115,7 +134,7 @@ The solution supports the following personas:
 
 ## Purpose
 
-The Golden Visit Report Record Type provides a globally standardized Visit Report experience while supporting AI-assisted visit preparation and post-visit documentation.
+The Golden Visit Report Record Type provides a globally standardized Visit Report experience while supporting AI-assisted visit planning, documentation, summaries, transcription and follow-up management.
 
 ---
 
@@ -181,7 +200,7 @@ The Golden Visit Report Record Type provides a globally standardized Visit Repor
 | Follow Up Actions |
 | Last Visit Summary |
 | Market Feedback |
-| Reminder for the Visit |
+| Reminder For Visit |
 | Net Promoter Score |
 | Campaign History |
 | AP Survey |
@@ -210,9 +229,7 @@ The Golden Visit Report Record Type provides a globally standardized Visit Repor
 
 # 3.4 Page Layouts
 
-## Layout
-
-### SC_VisitReport_GLB_Layout
+## SC_VisitReport_GLB_Layout
 
 ### Layout Sections
 
@@ -234,6 +251,8 @@ The Golden Visit Report Record Type provides a globally standardized Visit Repor
 | Visit Report Attendees |
 | Notification Histories |
 | Visit Report Topics |
+
+> **Note:** Visit Report Crops are additionally exposed through a dedicated **Crops Tab** on the Golden Visit Report Lightning Page to improve usability and allow direct crop management from the Visit Report experience.
 
 ### Actions
 
@@ -270,7 +289,7 @@ The Golden Visit Report Record Type provides a globally standardized Visit Repor
 
 ### Details Tab
 
-Contains all business sections:
+Contains:
 
 - General Information
 - Pre-Call Plan
@@ -284,11 +303,51 @@ Contains all business sections:
 Contains:
 
 - Files
-- Products
-- Crops
-- Topics
-- Attendees
-- Notifications
+- Visit Products
+- Visit Report Topics
+- Visit Report Attendees
+- Notification Histories
+
+### Crops Tab
+
+The Crops tab provides dedicated management of Visit Report Crop records associated with the Visit Report.
+
+#### Purpose
+
+Allows Sales users to capture crop-related information discussed during customer visits and maintain traceability between the Visit Report and Crop records.
+
+#### Available Features
+
+- View Visit Report Crops
+- Create New Visit Report Crop
+- Edit Existing Crop Records
+- Review Crop Information
+- Navigate between Visit Report and Crop records
+
+#### Related List
+
+| Related List |
+|--------------|
+| Visit Report Crops |
+
+#### User Actions
+
+| Action |
+|---------|
+| New Visit Report Crop |
+| Open Existing Crop |
+| Edit Crop |
+| View Crop Details |
+
+#### Supported Personas
+
+- Sales Representative
+- Sales Manager
+- Commercial Excellence
+
+#### Business Value
+
+The Crops tab separates crop-specific discussions from the main Visit Report while maintaining a direct relationship to the customer visit, improving reporting accuracy and user experience.
 
 ### Meeting Notes Tab
 
@@ -312,16 +371,29 @@ Contains:
 
 ---
 
+## Dynamic Actions
+
+- Edit Attendees
+- File
+- Delete
+- Post
+- Distribute Internally
+- View PDF
+- Clone with Related
+- New Sales Event
+
+---
+
 # 3.6 Validation Rules
 
-No new validation rules were introduced as part of the Golden Template implementation.
+No new validation rules were introduced for the Golden Template implementation.
 
 Validation occurs through:
 
-- Existing Salesforce Validation Rules
-- Screen Flow Validation
+- Standard Salesforce Validations
+- Flow Validations
 - AI Data Validation
-- Save-Time Record Validation
+- Save-Time Validation
 
 ---
 
@@ -378,53 +450,43 @@ AI Suggestions      Voice Transcription
 
 # 3.8 Personas
 
-| Persona |
-|----------|
-| Sales Representative |
-| Sales Manager |
-| Commercial Excellence |
+- Sales Representative
+- Sales Manager
+- Commercial Excellence
 
 ---
 
 # 3.9 Permission Sets
 
-| Permission Set |
-|----------------|
-| SC_CORE |
-| SALESREP_BASE |
-| SALESMANAGER_BASE |
-| COMMERCEEXCELLENCE_BASE |
-| Visit Report Creation |
-| Visit Report Preparation |
+- SC_CORE
+- SALESREP_BASE
+- SALESMANAGER_BASE
+- COMMERCEEXCELLENCE_BASE
+- Visit Report Creation
+- Visit Report Preparation
 
 ---
 
 # 3.10 Permission Set Groups
 
-| Permission Set Group |
-|-----------------------|
-| SalesRep_SC_GRP |
-| SalesManager_SC_GRP |
-| CommercialExcellence_SC_GRP |
+- SalesRep_SC_GRP
+- SalesManager_SC_GRP
+- CommercialExcellence_SC_GRP
 
 ---
 
 # 3.11 Profiles
 
-| Profile |
-|----------|
-| SC_LITE |
+- SC_LITE
 
 ---
 
 # 3.12 Custom Permissions
 
-| Custom Permission |
-|-------------------|
-| VisitReportCreation |
-| SALESREP_SC_CP |
-| SALESMANAGER_SC_CP |
-| COMMERCIALEXCELLENCE_SC_CP |
+- VisitReportCreation
+- SALESREP_SC_CP
+- SALESMANAGER_SC_CP
+- COMMERCIALEXCELLENCE_SC_CP
 
 ---
 
@@ -486,6 +548,9 @@ SALESREP_CP  SALESMANAGER_CP  COMMERCIALEXCELLENCE_CP
 | Create Event | ✅ | ✅ | ✅ |
 | View PDF | ✅ | ✅ | ✅ |
 | Clone with Related | ✅ | ✅ | ✅ |
+| Create Visit Report Crop | ✅ | ✅ | ✅ |
+| Edit Visit Report Crop | ✅ | ✅ | ✅ |
+| View Visit Report Crop | ✅ | ✅ | ✅ |
 
 ---
 
@@ -503,6 +568,11 @@ SC_VisitReport_GLB_FlexiPage
 +-- Details Tab
 |
 +-- Related Tab
+|
++-- Crops Tab
+|      |
+|      +-- Visit Report Crops
+|      +-- New Crop Creation
 |
 +-- Meeting Notes Tab
 |      |
@@ -535,13 +605,25 @@ User completes:
 
 ### Step 4
 
-User opens Meeting Notes.
+User navigates to the Crops Tab.
 
 ### Step 5
 
-User launches AI preparation.
+User creates or updates Visit Report Crop records related to the customer visit.
 
 ### Step 6
+
+User reviews Crop information associated with the Visit Report.
+
+### Step 7
+
+User opens Meeting Notes.
+
+### Step 8
+
+User launches AI preparation.
+
+### Step 9
 
 AI provides:
 
@@ -549,27 +631,27 @@ AI provides:
 - Recommendations
 - Summary Assistance
 
-### Step 7
+### Step 10
 
 User records voice notes.
 
-### Step 8
+### Step 11
 
 EinsteinTranscribeWCmp converts speech to text.
 
-### Step 9
+### Step 12
 
 Flow processes data and updates Visit Report.
 
-### Step 10
+### Step 13
 
 User reviews Post-Call Analysis.
 
-### Step 11
+### Step 14
 
 User saves Visit Report.
 
-### Step 12
+### Step 15
 
 System creates follow-up Tasks and Events when applicable.
 
@@ -579,23 +661,31 @@ System creates follow-up Tasks and Events when applicable.
 
 ### Create Visit Report
 
-> Add Screenshot
+> Insert Screenshot
 
 ### Golden Layout
 
-> Add Screenshot
+> Insert Screenshot
+
+### Crops Tab
+
+> Insert Screenshot
+
+### Create Visit Report Crop
+
+> Insert Screenshot
 
 ### Meeting Notes & AI Experience
 
-> Add Screenshot
+> Insert Screenshot
 
 ### Dynamic Actions
 
-> Add Screenshot
+> Insert Screenshot
 
 ### Mobile Experience
 
-> Add Screenshot
+> Insert Screenshot
 
 ---
 
@@ -615,6 +705,33 @@ System creates follow-up Tasks and Events when applicable.
 
 ---
 
+## Visit Report Crops Management
+
+### Component Type
+
+Lightning Page Configuration
+
+### Purpose
+
+Provides dedicated access to Visit Report Crop records directly from the Visit Report.
+
+### Trigger
+
+User navigates to the Crops Tab.
+
+### Actions Supported
+
+- Create Visit Report Crop
+- Edit Visit Report Crop
+- View Visit Report Crop
+- Navigate between child crop records and parent Visit Report
+
+### Expected Behaviour
+
+All Crop records remain associated with the current Visit Report and inherit the same security model and access permissions defined for Golden Visit Report users.
+
+---
+
 ## Technical Execution Flow
 
 ```text
@@ -623,8 +740,11 @@ User
  v
 FlexiPage
  |
- v
-Meeting Notes
+ +---- Crops Tab
+ |         |
+ |         +---- Create/Edit Crop Records
+ |
+ +---- Meeting Notes
  |
  v
 Visit Report Creation Flow
@@ -654,50 +774,3 @@ Save Visit Report
 ```
 
 ---
-
-# 7. Traceability Matrix
-
-| Requirement | Source Story |
-|-------------|--------------|
-| Golden Record Type | 1032101 |
-| Golden Layout | 1032101 |
-| Golden FlexiPage | 1032101 |
-| Dynamic Actions | 1032101 |
-| Mobile Optimization | 1032101 |
-| AI Enablement | 1034337 |
-| Voice-to-Text | 1034337 |
-| Visit Summary AI | 1034337 |
-| Permission Updates | 1034337 |
-| Documentation Consolidation | 1043380 |
-
----
-
-# 8. Deployment Overview
-
-## Metadata Deployed
-
-- Record Types
-- Page Layouts
-- Lightning Pages
-- Flows
-- Permission Sets
-- Permission Set Groups
-- Custom Permissions
-
----
-
-## Impacted Personas
-
-- Sales Representative
-- Sales Manager
-- Commercial Excellence
-
----
-
-## Impacted Processes
-
-- Visit Planning
-- Visit Execution
-- Post-Visit Documentation
-- AI Assisted Visit Reporting
-- Follow-up Management
