@@ -1,19 +1,5 @@
 # Golden Visit Report Template
 
-> **User Story:** 1043380
->
-> **Title:** Documentation – Creation of Golden Visit Report Template
->
-> **Program:** Salesforce@AP
->
-> **Solution Area:** Visit Management
->
-> **Document Status:** Approved
->
-> **Documentation Type:** Functional & Technical Solution Documentation
->
-> **Reference Stories:** 1032101, 1034337
-
 ---
 
 # Table of Contents
