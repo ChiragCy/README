@@ -37,7 +37,7 @@
 
 # 1. Executive Summary
 
-The Golden Visit Report Template establishes a standardized global Visit Report process across Salesforce@AP.
+The Golden Visit Report Template provides a unified global visit management experience with AI-enabled visit preparation, voice transcription, summary generation, standardized metadata, security model, Lightning experience and mobile support. 
 
 The solution consolidates:
 
