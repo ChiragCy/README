@@ -67,40 +67,30 @@ Supported personas:
 |         SC_VisitReport_GLB_FlexiPage               |
 +----------------------------------------------------+
                         |
-      +-----------------+------------------+
-      |                 |                  |
-      v                 v                  v
-   Details          Related            Crops
-     Tab              Tab               Tab
+      +-----------+-----------+-----------+
+      |           |           |           |
+      v           v           v           v
+   Details     Related      Crops    Meeting Notes
+     Tab          Tab         Tab         Tab
+                               |            |
+                               v            v
+                 Visit Report      Visit Report
+                 Crop Records      Creation Flow
+                               |            |
+                               v            v
+                   Create/Edit        AI Components
+                    Crop Data              |
+                            +--------------+--------------+
+                            |              |               |
+                            v              v               v
+                       Einstein      Fetch Metadata   Process Visit
+                       Transcribe         Flow            Summary
                                            |
                                            v
-                           Visit Report Crop Records
+                                    Save Visit Report
                                            |
                                            v
-                               Create / Edit Crop Data
-
-                        |
-                        v
-                 Meeting Notes Tab
-                        |
-                        v
-              Visit Report Creation Flow
-                        |
-                        v
-                  AI Components
-                        |
-    +-------------------+-------------------+
-    |                   |                   |
-    v                   v                   v
-Einstein          Fetch Metadata      Process Visit
-Transcribe             Flow             Summary
-                        |
-                        v
-                 Save Visit Report
-                        |
-                        v
-              Create Tasks & Events
-```
+                                Create Tasks & Events
 
 ---
 
