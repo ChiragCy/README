@@ -74,8 +74,8 @@ Supported personas:
      Tab          Tab         Tab         Tab
                                |            |
                                v            v
-                 Visit Report      Visit Report
-                 Crop Records      Creation Flow
+                        Visit Report    Visit Report
+                        Crop Records   Creation Flow
                                |            |
                                v            v
                    Create/Edit        AI Components
