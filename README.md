@@ -92,6 +92,7 @@ Supported personas:
                                            v
                                 Create Tasks & Events
 
+```
 ---
 
 # 3. Metadata
