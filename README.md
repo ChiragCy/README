@@ -125,7 +125,8 @@ The Golden Visit Report Record Type provides a globally standardized Visit Repor
 | Visit Report Name |
 | Account |
 | Events |
-| OD Campaign |
+| OD |
+| Campaign |
 | Status |
 | Reason of Visit |
 | Contact Type |
@@ -134,6 +135,7 @@ The Golden Visit Report Record Type provides a globally standardized Visit Repor
 | Business Segment |
 | Account Plan |
 | Account Plan Objective |
+| Location |
 
 ---
 
@@ -141,7 +143,7 @@ The Golden Visit Report Record Type provides a globally standardized Visit Repor
 
 | Field |
 |---------|
-| Call Objective |
+| Call Objective(Desired Commitment) |
 | Statement of Intent |
 | Behavior Style |
 | Resources / Collateral Needed |
@@ -175,13 +177,6 @@ The Golden Visit Report Record Type provides a globally standardized Visit Repor
 | What Could Improve |
 | Next Call Objective |
 | Follow Up Actions |
-| Last Visit Summary |
-| Market Feedback |
-| Reminder For Visit |
-| Net Promoter Score |
-| Campaign History |
-| AP Survey |
-
 ---
 
 ## System Information
@@ -222,14 +217,15 @@ The Golden Visit Report Record Type provides a globally standardized Visit Repor
 | Related List |
 |--------------|
 | My Insights |
-| Visit Products |
 | Visit Report Crops |
 | Files |
 | Visit Report Attendees |
 | Notification Histories |
 | Visit Report Topics |
+| Stewardship Activities |
+| Sample Request |
 
-> **Note:** Visit Report Crops are additionally exposed through a dedicated **Crops Tab** on the Golden Visit Report Lightning Page to improve usability and allow direct crop management from the Visit Report experience.
+> **Note:** Visit Report Crops are exposed through a dedicated **Crops Tab** on the Golden Visit Report Lightning Page to improve usability and allow direct crop management from the Visit Report experience.
 
 ### Actions
 
@@ -242,7 +238,8 @@ The Golden Visit Report Record Type provides a globally standardized Visit Repor
 | Distribute Internally |
 | View PDF |
 | Clone with Related |
-| New Sales Event |
+| New Event |
+| New Task |
 
 ---
 
@@ -307,14 +304,21 @@ Allows Sales users to capture crop-related information discussed during customer
 |--------------|
 | Visit Report Crops |
 
-#### User Actions
+#### Action Buttons
 
 | Action |
 |---------|
-| New Visit Report Crop |
-| Open Existing Crop |
-| Edit Crop |
-| View Crop Details |
+| Edit |
+| Delete |
+| New Event |
+| New Task |
+| Create Sample Request |
+| View PDF |
+| Clone with Related |
+| Distribute Internally |
+| Attendees |
+| AP Survey |
+| Send Invitation |
 
 #### Supported Personas
 
